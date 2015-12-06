@@ -23,4 +23,15 @@ tag_page_layout: tag_page
 tag_page_dir: tag
 
 # Blog Settings
-permalink: /articles/:slug.html
+permalink: /articles/:slug
+
+collections:
+  resources:
+    permalink: /resources/:path
+
+defaults:
+  - scope:
+      path: ""
+      type: resources
+    values:
+      layout: resource

@@ -1,0 +1,20 @@
+---
+layout: default
+title: Resources
+---
+
+<div class="resources">
+
+  <h1 class="page-heading">Resources</h1>
+
+  <ul class="post-list">
+    {% for resource in site.resources %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ resource.link }}">{{ resource.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
