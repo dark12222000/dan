@@ -107,6 +107,8 @@ header .top-bar {
 body > main {
   background: rgba(white, .5);
 
+  &.align-stretch { display: flex; }
+
   .columns {
     padding: 1rem;
   }
