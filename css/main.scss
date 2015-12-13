@@ -118,14 +118,19 @@ body > footer {
   padding: 1rem;
   background-color: rgba(black, .25);
 
-  p {
-    color: gray;
-    text-align: center;
-   }
-  a {
-    color: white;
-    text-align: center;
-  }
+  > * { text-align: center; }
+
+  p { color: $grey-color; }
+
+  a:link,
+  a:visited { color: $grey-color-light; }
+
+  a:hover,
+  a:active,
+  a:focus { color: white; }
+
+  a:active,
+  a:focus { background: $brand-color; }
 }
 
 .button {
