@@ -115,12 +115,16 @@ body > main {
 }
 
 body > footer {
+  font-size: .75em;
   padding: 1rem;
   background-color: rgba(black, .25);
 
   > * { text-align: center; }
 
-  p { color: $grey-color; }
+  p {
+    color: $grey-color;
+    margin-bottom: 0;
+  }
 
   a:link,
   a:visited { color: $grey-color-light; }
