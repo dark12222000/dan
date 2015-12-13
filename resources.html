@@ -7,14 +7,20 @@ title: Resources
 
   <h1 class="page-heading">Resources</h1>
 
-  <ul class="post-list">
-    {% for resource in site.resources %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ resource.link }}">{{ resource.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    {% assign categories = site.resources | group_by:"category" %}
+    {% for category in categories %}
+    <h2> {{ category.name }} </h2>
+    <ul class="post-list">
+        {% for resource in category.items %}
+        <li>
+          <h2>
+            <a class="post-link" href="{{ resource.link }}">{{ resource.title }}</a>
+          </h2>
+          <span>{{ resource | tags}}</span>
+          <p>{{ resource.content }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+  {% endfor %}
 
 </div>

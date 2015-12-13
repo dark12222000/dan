@@ -103,3 +103,10 @@ body > footer {
 
   a { color: white; }
 }
+
+.button {
+  background-color: $brand-color;
+  &:hover { background-color: lighten($brand-color, 5%); }
+  &:focus,
+  &:active { background-color: darken($brand-color, 5%); }
+}
