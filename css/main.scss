@@ -15,7 +15,7 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
+$background-color: #000000;
 $brand-color:      #770000;
 
 $grey-color:       #828282;
@@ -59,9 +59,11 @@ $on-laptop:        800px;
 html body {
     background-image: url('../img/bg/wayfinder-fantasticmaps.jpg');
     background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
 }
 
-header .top-bar {
+.top-bar {
   background-color: rgba(black, .25);
 
   ul.menu { background-color: transparent; }
@@ -93,12 +95,6 @@ header .top-bar {
     border: 0;
     min-height: 2.25rem;
 
-    .menu-icon {
-      &:after { display: none; }
-
-      > svg > path { fill: white; }
-    }
-
     .page-link { margin-left: 0; }
   }
 
@@ -107,10 +103,9 @@ header .top-bar {
 body > main {
   background: rgba(white, .5);
 
-  &.align-stretch { display: flex; }
-
-  .columns {
-    padding: 1rem;
+  > .columns {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .content { background: rgba(white, .5); }
@@ -127,21 +122,4 @@ body > footer {
     color: $grey-color;
     margin-bottom: 0;
   }
-
-  a:link,
-  a:visited { color: $grey-color-light; }
-
-  a:hover,
-  a:active,
-  a:focus { color: white; }
-
-  a:active,
-  a:focus { background: $brand-color; }
-}
-
-.button {
-  background-color: $brand-color;
-  &:hover { background-color: lighten($brand-color, 5%); }
-  &:focus,
-  &:active { background-color: darken($brand-color, 5%); }
 }
